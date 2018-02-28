@@ -1,0 +1,21 @@
+! do not scroll with output
+URxvt*scrollTtyOutput: false
+
+! scroll in relation to buffer (with mouse scroll or Shift+Page Up)
+URxvt*scrollWithBuffer: true
+
+! scroll back to the bottom on keypress
+URxvt*scrollTtyKeypress: true
+
+! scroll bar
+URxvt.scrollBar: 0
+
+! font settings
+!Xft.lcdfilter: lcddefault
+!Xft.antialias: 1 
+!Xft.rgba: rgb
+Xft.hinting: 1 
+Xft.hintstyle: hintslight
+!Xft.dpi: 80
+URxvt.font: xft:Noto Sans Mono:pixelsize=16
+URxvt.letterSpace: -0.8
