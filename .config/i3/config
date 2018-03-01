@@ -73,24 +73,6 @@ bindsym $mod+space focus mode_toggle
 # focus the parent container
 bindsym $mod+a focus parent
 
-## Set colors from Xresources
-# NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
-# it fails to get colors from Xresources.
-set_from_resource $fg color3 #f0f0f0
-set_from_resource $bg color1 #f0f0f0
-set_from_resource $bg1 color2 #f0f0f0
-set_from_resource $fg1 color5 #f0f0f0
-set $red #870000
-
-# class                 border  backgr. text indicator child_border
-client.focused          $bg     $bg     $fg  $bg1      $bg
-client.focused_inactive $fg     $fg     $fg  $fg1      $fg
-client.unfocused        $fg     $bg     $fg  $fg1      $fg
-client.urgent           $red    $red    $red $red      $red       
-client.placeholder      $bg     $bg     $fg  $bg       $bg
-
-client.background       $bg
-
 # floating modifier
 floating_modifier $mod
 
