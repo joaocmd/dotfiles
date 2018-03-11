@@ -16,6 +16,6 @@ Xft.antialias: 1
 Xft.rgba: rgba
 Xft.hinting: 1 
 Xft.hintstyle: hintslight
-Xft.dpi: 110
+Xft.dpi: 100
 URxvt.font: xft:Noto Sans Mono:pixelsize=16
 URxvt.letterSpace: -0.8
