@@ -11,11 +11,11 @@ URxvt*scrollTtyKeypress: true
 URxvt.scrollBar: 0
 
 ! font settings
-!Xft.lcdfilter: lcddefault
-!Xft.antialias: 1 
-!Xft.rgba: rgb
+Xft.lcdfilter: lcddefault
+Xft.antialias: 1 
+Xft.rgba: rgba
 Xft.hinting: 1 
 Xft.hintstyle: hintslight
-!Xft.dpi: 80
+Xft.dpi: 110
 URxvt.font: xft:Noto Sans Mono:pixelsize=16
 URxvt.letterSpace: -0.8
