@@ -9,13 +9,14 @@
 
 [colors]
 background = ${xrdb:color0:#222}
+#background = #00000000
 ;background = #222
-background-alt = #444
+background-alt = #00000000
 foreground = ${xrdb:color7:#222}
 ;foreground = #dfdfdf
 foreground-alt = #555
-primary = #ffb52a
-secondary = #e60053
+primary = #a7a7a7a7
+secondary = #a7a7a7a7
 alert = #bd2c40
 
 [bar/example]
@@ -73,12 +74,12 @@ label = %title:0:30:...%
 type = internal/xkeyboard
 blacklist-0 = num lock
 
-format-prefix = " "
+format-prefix = " "
 format-prefix-foreground = ${colors.foreground-alt}
-format-prefix-underline = ${colors.secondary}
+#format-prefix-underline = ${colors.secondary}
 
 label-layout = %layout%
-label-layout-underline = ${colors.secondary}
+#label-layout-underline = ${colors.secondary}
 label-indicator-padding = 2
 label-indicator-margin = 1
 label-indicator-background = ${colors.secondary}
@@ -125,6 +126,7 @@ wrapping-scroll = false
 
 label-mode-padding = 2
 label-mode-foreground = #000
+#label-mode-background = ${colors.primary}
 label-mode-background = ${colors.primary}
 
 ; focused = Active workspace on focused monitor
@@ -247,7 +249,7 @@ date-alt = " %Y-%m-%d"
 time = %H:%M
 time-alt = %H:%M:%S
 
-format-prefix = 
+format-prefix = 
 format-prefix-foreground = ${colors.foreground-alt}
 format-underline = #0a6cf5
 

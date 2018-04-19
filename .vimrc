@@ -3,6 +3,7 @@ syntax on
 set showcmd
 set laststatus=2
 set wildmenu
+set mouse=a
 
 " Identation
 set tabstop=4

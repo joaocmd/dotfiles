@@ -76,6 +76,16 @@ bindsym $mod+a focus parent
 # floating modifier
 floating_modifier $mod
 
+# colors
+# class                 border  backgr. text    indicator child_border
+client.focused          #b7b7b7 #b7b7b7 #ffffff #b7b7b7   #b7b7b7
+client.focused_inactive #111111 #111111 #888888 #111111   #111111
+client.unfocused        #111111 #111111 #888888 #111111   #111111
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
 # defining maximum size
 floating_maximum_size 1300 x 800
 set $workspace1 "1:" 
@@ -161,19 +171,20 @@ exec --no-startup-id nm-applet
 exec --no-startup-id mpd
 
 # Gaps
-for_window [class="^.*"] border pixel 0
-gaps inner 0
+for_window [class="^.*"] border pixel 2
+gaps inner 5
 #smart_gaps on
+hide_edge_borders smart
 
 # Brightness Controls
-bindsym $mod+F7 exec $HOME/.config/i3/togglescreen.sh
-bindsym $mod+F5 exec light -U 5
-bindsym $mod+F6 exec light -A 5
+bindsym $mod+F7 exec --no-startup-id $HOME/.config/i3/togglescreen.sh
+bindsym $mod+F5 exec --no-startup-id light -U 5
+bindsym $mod+F6 exec --no-startup-id light -A 5
 
 # Sound Controls
-bindsym $mod+F10 exec amixer set 'Master' toggle
-bindsym $mod+F11 exec amixer set 'Master' 5-
-bindsym $mod+F12 exec amixer set 'Master' 5+
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5%
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5%
 
 # Assignments
 assign [class="Firefox"] $workspace1
