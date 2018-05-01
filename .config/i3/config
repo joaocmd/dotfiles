@@ -129,7 +129,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # launch i3lock
-bindsym $mod+Shift+x exec i3lock
+bindsym $mod+Shift+x exec betterlockscreen -l
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -190,3 +190,4 @@ bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume @DEFAULT
 assign [class="Firefox"] $workspace1
 assign [class="discord"] $workspace2
 assign [class="Slack"] $workspace3
+
