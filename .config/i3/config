@@ -166,7 +166,8 @@ bindsym $mod+Shift+e mode "exit"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id wal -R
 exec --no-startup-id redshift
-exec --no-startup-id compton -i 0.95 -f -D 3 -r 6 -o 1
+exec --no-startup-id compton -i -f -D 3 -r 6 -o 1
+#exec --no-startup-id compton -i 0.95 -f -D 3 -r 6 -o 1
 exec --no-startup-id nm-applet 
 exec --no-startup-id mpd
 
