@@ -178,9 +178,8 @@ gaps inner 5
 hide_edge_borders smart
 
 # Brightness Controls
-bindsym $mod+F7 exec --no-startup-id $HOME/.config/i3/togglescreen.sh
-bindsym $mod+F5 exec --no-startup-id light -U 5
-bindsym $mod+F6 exec --no-startup-id light -A 5
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 5
 
 # Sound Controls
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle
