@@ -11,3 +11,11 @@ set softtabstop=4
 set expandtab
 set shiftwidth=4
 set autoindent
+
+" Set Y to yank till line end instead of doing the same as yy
+nnoremap Y y$
+
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
