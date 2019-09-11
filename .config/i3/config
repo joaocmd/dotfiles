@@ -129,7 +129,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # launch i3lock
-bindsym $mod+Shift+x exec betterlockscreen -l dim
+bindsym $mod+Shift+x exec i3lock
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -166,20 +166,19 @@ bindsym $mod+r mode "resize"
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id redshift-gtk
 exec --no-startup-id nm-applet 
-exec --no-startup-id compton -i 0.90 -f -D 3 -r 6 -o 1 --active-opacity 0.94
+exec --no-startup-id compton --config $HOME/.config/compton.conf
 exec --no-startup-id wal -i $HOME/Images/PinkFall.jpg -n
 exec --no-startup-id setwp
-#exec --no-startup-id mpd
 
 # Gaps
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 gaps inner 8
 gaps outer 2
 smart_gaps on
 hide_edge_borders smart
 
 # Print Screen
-bindsym Print exec --no-startup-id flameshot gui
+bindsym $mod+shift+s exec --no-startup-id flameshot gui
 
 # Brightness Controls
 bindsym XF86MonBrightnessDown exec --no-startup-id light -U 5
